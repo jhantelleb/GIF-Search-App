@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Fpn-te-76S">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="01J-lp-oVM" id="X7U-Is-2sk"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NJy-o5-vU4">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R5f-G0-AHc">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="O53-hv-fBj">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fpn-te-76S" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="2Jj-UB-lCY"/>
+                            <constraint firstItem="NJy-o5-vU4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8Dp-vZ-E4r"/>
+                            <constraint firstItem="NJy-o5-vU4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="F0b-s5-xPk"/>
+                            <constraint firstItem="Fpn-te-76S" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KAZ-yX-Oqh"/>
+                            <constraint firstItem="NJy-o5-vU4" firstAttribute="top" secondItem="Fpn-te-76S" secondAttribute="bottom" id="dFM-yq-cfz"/>
+                            <constraint firstItem="Fpn-te-76S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qQf-eN-QPe"/>
+                            <constraint firstItem="NJy-o5-vU4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ylk-tL-3lw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="o9z-vH-5Fq" id="o8S-Uj-RKJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="o9z-vH-5Fq">
+                    <connections>
+                        <outlet property="delegate" destination="01J-lp-oVM" id="WwE-nf-AJ9"/>
+                        <outlet property="searchBar" destination="Fpn-te-76S" id="4qA-bd-XoD"/>
+                        <outlet property="searchContentsController" destination="01J-lp-oVM" id="iZX-h8-hTG"/>
+                        <outlet property="searchResultsDataSource" destination="01J-lp-oVM" id="yzE-R2-LIX"/>
+                        <outlet property="searchResultsDelegate" destination="01J-lp-oVM" id="YPw-dX-3yd"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+</document>
